@@ -4,7 +4,7 @@ import NavItems from "@/components/NavItems";
 import UserDropdown from "@/components/UserDropdown";
 
 
-const Header = () => {
+const Header = async ({ user }: { user: User }) => {
 
 return (
     <header className="sticky top-0 header">
@@ -17,7 +17,7 @@ return (
                       <NavItems />
             </nav>
 
-                     <UserDropdown/>
+                     <UserDropdown  user={user}/>
         </div>
     </header>)
 
